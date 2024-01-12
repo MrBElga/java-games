@@ -9,7 +9,7 @@ This repository features a collection of game projects implemented in Java to en
 - Tic-Tac-Toe ✅
 - Chess ❌
 - Snake Game ❌
-- Tetris ❌
+- Tetris ✅
 - Arkanoid ❌
 - Battleship ❌
 - Sudoku ❌
@@ -31,7 +31,7 @@ Este repositório apresenta uma coleção de projetos de jogos implementados em 
 - Jogo da Velha ✅
 - Xadrez ❌
 - Jogo da Cobra ❌
-- Tetris ❌
+- Tetris ✅
 - Arkanoid ❌
 - Batalha Naval ❌
 - Sudoku ❌
