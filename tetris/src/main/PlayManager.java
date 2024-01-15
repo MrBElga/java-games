@@ -31,6 +31,9 @@ public class PlayManager {
     private Timer rainbowTimer;
     public static int dropInterval = 60; //drop de 60 frames
     public static ArrayList<Block> staticBlocks = new ArrayList<>();
+    boolean effectCounterOn;
+    int effectCounter;
+    ArrayList<Integer> effectY = new ArrayList<>();
     public PlayManager(){
         //area frame
         left_x = (GamePanel.WIDTH/2) - (WIDTH/2); //1280/2 - 360/2 = 460
@@ -121,6 +124,9 @@ public class PlayManager {
             if(x == right_x)
             {
                 if(blockCount==12){
+                    effectCounterOn = true;
+                    effectY.add(y);
+
                     for (int i = staticBlocks.size()-1; i > -1 ; i--) {
                         if(staticBlocks.get(i).y==y){
                             staticBlocks.remove(i);
@@ -168,6 +174,19 @@ public class PlayManager {
             staticBlocks.get(i).draw(g2);
         }
 
+        effectCounter++;
+        float fade = 1.0f - effectCounter / 10.0f;
+
+        g2.setColor(new Color(1.0f, 0.0f, 0.0f, fade));
+        for (int i = 0; i < effectY.size(); i++) {
+            g2.fillRect(left_x, effectY.get(i), WIDTH, Block.SIZE);
+        }
+
+        if (effectCounter == 10) {
+            effectCounterOn = false;
+            effectCounter = 0;
+            effectY.clear();
+        }
         g2.setFont(new Font("Arial", Font.PLAIN, 50));
         if(KeyHandler.pausePressed) {
             x = left_x + 70;
