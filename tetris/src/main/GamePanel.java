@@ -1,11 +1,15 @@
 package main;
 
+import javax.sound.midi.Soundbank;
 import javax.swing.*;
 import java.awt.*;
 
 public class GamePanel extends JPanel implements Runnable{
     public  static final int WIDTH = 1280;
     public  static final int HEIGHT = 720;
+    public static sound music = new sound();
+    public static  sound sc = new sound();
+
     final int FPS = 60;
     Thread gameThread;
     PlayManager pm;
@@ -23,6 +27,9 @@ public class GamePanel extends JPanel implements Runnable{
     public void launchGame(){
         gameThread = new Thread(this);
         gameThread.start();
+
+        music.play(0,true);
+        music.loop();
     }
 
     @Override

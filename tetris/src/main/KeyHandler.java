@@ -29,9 +29,12 @@ public class KeyHandler implements KeyListener {
         {
             if(pausePressed){
                 pausePressed = false;
+                GamePanel.music.play(0,true);
+                GamePanel.music.loop();
             }
             else{
                 pausePressed = true;
+                GamePanel.music.stop();
             }
         }
     }

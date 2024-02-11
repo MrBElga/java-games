@@ -5,15 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="033a5ce0-bdeb-4732-b6c4-aa8d42fa2637" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/tetris/src/main/sound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tetris/src/res/Tetris.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tetris/src/res/delete line.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tetris/src/res/gameover.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tetris/src/res/rotation.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tetris/src/res/touch floor.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tetris/main/PlayManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tetris/main/PlayManager$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tetris/main/GamePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tetris/main/GamePanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tetris/main/KeyHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tetris/main/KeyHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/tetris/main/PlayManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tetris/main/PlayManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tetris/mino/Mino.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tetris/mino/Mino.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tetris/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/tetris/src/main/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tetris/src/main/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/tetris/src/main/KeyHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tetris/src/main/PlayManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/tetris/src/main/PlayManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tetris/src/mino/Mino.java" beforeDir="false" afterPath="$PROJECT_DIR$/tetris/src/mino/Mino.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -39,7 +57,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Admin/Desktop/-java-games",
+    "last_opened_file_path": "C:/Users/Admin/Desktop/-java-games/tetris/src/res",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -49,6 +67,15 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Desktop\-java-games\tetris\src\res" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Desktop\-java-games\tetris\src" />
+      <recent name="C:\Users\Admin\Desktop\-java-games\tetris\res" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.Main" />
@@ -89,7 +116,7 @@
       <workItem from="1705343945264" duration="1476000" />
       <workItem from="1705345465177" duration="750000" />
       <workItem from="1705346252067" duration="232000" />
-      <workItem from="1707657864381" duration="4140000" />
+      <workItem from="1707657864381" duration="7420000" />
     </task>
     <servers />
   </component>

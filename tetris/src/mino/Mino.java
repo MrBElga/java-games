@@ -1,5 +1,6 @@
 package mino;
 
+import main.GamePanel;
 import main.KeyHandler;
 import main.PlayManager;
 
@@ -137,6 +138,7 @@ public class Mino {
                 break;
             }
             KeyHandler.upPressed = false;
+            GamePanel.sc.play(3,false);
         }
         checkMovementCollision();
         if(KeyHandler.downPressed){
@@ -171,6 +173,9 @@ public class Mino {
         }
 
         if(bottomCollision){
+            if(deactivating == false){
+                GamePanel.sc.play(4,false);
+            }
             deactivating=true;
         }
         else {

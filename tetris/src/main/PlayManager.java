@@ -106,6 +106,8 @@ public class PlayManager {
             if(currentMino.b[0].x == MINO_START_X && currentMino.b[0].y == MINO_START_Y)
             {
                    gameOver = true;
+                   GamePanel.music.stop();
+                   GamePanel.sc.play(2,false);
             }
 
             currentMino.deactivating = false;
@@ -175,6 +177,7 @@ public class PlayManager {
         }
         if(lineCOunt>0)
         {
+            GamePanel.sc.play(1,false);
             int singleLineScore = 10 * level;
             scores+=singleLineScore * lineCOunt;
         }
@@ -264,6 +267,23 @@ public class PlayManager {
             g2.setColor(rainbowColor);
             g2.drawString(String.valueOf("TETRIS".charAt(i)), x, y);
             x += g2.getFontMetrics().charWidth("TETRIS".charAt(i));
+        }
+        g2.setFont(new Font("Arial", Font.PLAIN, 20));
+        g2.setColor(Color.WHITE);
+        String[] comoJogarText = {
+                "Como Jogar:",
+                "W - Rotaciona o bloco",
+                "A e D - Movimentam o bloco",
+                "S - descer mais rapidamente",
+                "Barra de Espaço - Pausa o jogo"
+        };
+
+        int comoJogarX = 100;
+        int comoJogarY = top_y + 320;
+
+        for (String line : comoJogarText) {
+            g2.drawString(line, comoJogarX, comoJogarY);
+            comoJogarY += g2.getFontMetrics().getHeight();
         }
     }
 }
