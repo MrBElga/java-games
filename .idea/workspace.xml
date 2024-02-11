@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="033a5ce0-bdeb-4732-b6c4-aa8d42fa2637" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tetris/main/PlayManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tetris/main/PlayManager$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tetris/main/PlayManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tetris/main/PlayManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tetris/src/main/PlayManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/tetris/src/main/PlayManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +89,7 @@
       <workItem from="1705343945264" duration="1476000" />
       <workItem from="1705345465177" duration="750000" />
       <workItem from="1705346252067" duration="232000" />
-      <workItem from="1707657864381" duration="2850000" />
+      <workItem from="1707657864381" duration="4140000" />
     </task>
     <servers />
   </component>

@@ -35,7 +35,11 @@ public class PlayManager {
     public static ArrayList<Block> staticBlocks = new ArrayList<>();
     boolean effectCounterOn;
     int effectCounter;
+
     ArrayList<Integer> effectY = new ArrayList<>();
+    int level = 1;
+    int lines;
+    int scores;
     public PlayManager(){
         //area frame
         left_x = (GamePanel.WIDTH/2) - (WIDTH/2); //1280/2 - 360/2 = 460
@@ -121,6 +125,7 @@ public class PlayManager {
         int x = left_x;
         int y = top_y;
         int blockCount = 0;
+        int  lineCOunt = 0;
         while (x<right_x && y<bottom_y){
             for (int i = 0; i < staticBlocks.size(); i++) {
                 if(staticBlocks.get(i).x == x && staticBlocks.get(i).y == y) {
@@ -140,6 +145,22 @@ public class PlayManager {
                             staticBlocks.remove(i);
                         }
                     }
+                    lineCOunt++;
+                    lines++;
+
+                    if(lines % 10 == 0 && dropInterval > 1)
+                    {
+                        level++;
+                        if(dropInterval>10)
+                        {
+                            dropInterval-=10;
+                        }
+                        else
+                        {
+                            dropInterval -= 1;
+                        }
+                    }
+
                     for (int i = 0; i < staticBlocks.size(); i++) {
                         if(staticBlocks.get(i).y<y){
                             staticBlocks.get(i).y+=Block.SIZE;
@@ -151,6 +172,11 @@ public class PlayManager {
                 y += Block.SIZE;
             }
 
+        }
+        if(lineCOunt>0)
+        {
+            int singleLineScore = 10 * level;
+            scores+=singleLineScore * lineCOunt;
         }
     }
     public void draw(Graphics2D g2){
@@ -172,6 +198,17 @@ public class PlayManager {
             g2.drawString(String.valueOf("PROXIMO".charAt(i)), x, y + 60);
             x += g2.getFontMetrics().charWidth("PROXIMO".charAt(i));
         }
+        g2.setColor(Color.BLUE);
+        g2.drawRect(x-180,top_y,250,300);
+        x += 40;
+        y = top_y + 90;
+        g2.setColor(Color.white);
+        g2.drawString("LEVEL: "+level,x-180,y);
+        y+=70;
+        g2.drawString("LINES: "+lines,x-180,y);
+        y+=70;
+        g2.drawString("SCORE: "+scores,x-180,y);
+
 
         if(currentMino != null){
             currentMino.draw(g2);
