@@ -30,6 +30,8 @@ public class PlayManager {
     private int rainbowIndex = 0;
     private Timer rainbowTimer;
     public static int dropInterval = 60; //drop de 60 frames
+    boolean gameOver;
+
     public static ArrayList<Block> staticBlocks = new ArrayList<>();
     boolean effectCounterOn;
     int effectCounter;
@@ -96,6 +98,12 @@ public class PlayManager {
             staticBlocks.add(currentMino.b[1]);
             staticBlocks.add(currentMino.b[2]);
             staticBlocks.add(currentMino.b[3]);
+
+            if(currentMino.b[0].x == MINO_START_X && currentMino.b[0].y == MINO_START_Y)
+            {
+                   gameOver = true;
+            }
+
             currentMino.deactivating = false;
             currentMino = nexMino;
             currentMino.setXY(MINO_START_X,MINO_START_Y);
@@ -188,7 +196,18 @@ public class PlayManager {
             effectY.clear();
         }
         g2.setFont(new Font("Arial", Font.PLAIN, 50));
-        if(KeyHandler.pausePressed) {
+        if(gameOver){
+            x = left_x + 25;
+            y = top_y + 320;
+            for (int i = 0; i < "GAME OVER".length(); i++) {
+                Color rainbowColor = rainbowColors[(rainbowIndex + i) % rainbowColors.length];
+                g2.setColor(rainbowColor);
+                g2.drawString(String.valueOf("GAME OVER".charAt(i)), x, y);
+                x += g2.getFontMetrics().charWidth("GAME OVER".charAt(i));
+            }
+
+        }
+        else if(KeyHandler.pausePressed) {
             x = left_x + 70;
             y = top_y + 320;
 
@@ -199,6 +218,15 @@ public class PlayManager {
                 x += g2.getFontMetrics().charWidth("PAUSADO".charAt(i));
             }
         }
-
+        //titulo do jogo
+        x = 100;
+        y = top_y + 250;
+        g2.setFont(new Font("Arial", Font.PLAIN, 50));
+        for (int i = 0; i < "TETRIS".length(); i++) {
+            Color rainbowColor = rainbowColors[(rainbowIndex + i) % rainbowColors.length];
+            g2.setColor(rainbowColor);
+            g2.drawString(String.valueOf("TETRIS".charAt(i)), x, y);
+            x += g2.getFontMetrics().charWidth("TETRIS".charAt(i));
+        }
     }
 }
